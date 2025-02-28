@@ -7,7 +7,7 @@ function setInitialState() {
     if (window.innerWidth <= 768) {
         sidebar.classList.add('hidden');
         content.classList.add('full');
-        toggleBtn.textContent = '▼';
+        toggleBtn.textContent = 'Job description ▼';
     } else {
         sidebar.classList.remove('hidden');
         content.classList.remove('full');
@@ -23,7 +23,7 @@ toggleBtn.addEventListener('click', () => {
 
     // Change arrow based on device screen width.
     if (window.innerWidth <= 768) {
-        toggleBtn.textContent = sidebar.classList.contains('hidden') ? '▼' : '▲';
+        toggleBtn.textContent = sidebar.classList.contains('hidden') ? 'Job description ▼' : '▲';
     } else {
         toggleBtn.textContent = sidebar.classList.contains('hidden') ? '▶' : '◀';
     }
@@ -35,7 +35,7 @@ window.addEventListener('resize', () => {
         if (!sidebar.classList.contains('hidden')) {
             toggleBtn.textContent = '▲';
         } else {
-            toggleBtn.textContent = '▼';;
+            toggleBtn.textContent = 'Job description ▼';;
         }
     } else {
         if (!sidebar.classList.contains('hidden')) {
