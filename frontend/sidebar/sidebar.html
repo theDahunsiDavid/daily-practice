@@ -5,18 +5,21 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Sidebar Toggle</title>
+		<link rel="stylesheet" href="styles.css">
 	</head>
 
 	<body>
-		<div>
-			<button></button>
-			<p>Sidebar Content</p>
+		<div class="sidebar hidden-mobile">
+			<button class="toggle-btn">▶</button>
+			<p style="color: white; padding: 20px;">Sidebar Content</p>
 		</div>
 
-		<div>
+		<div class="content">
 			<h1>Main Content</h1>
 			<p>This is the main content area.</p>
 		</div>
+
+		<script src="scripts.js"></script>
 	</body>
 
 </html>
