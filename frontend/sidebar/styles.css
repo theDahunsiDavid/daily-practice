@@ -60,11 +60,13 @@ body {
     }
 
     .toggle-btn {
-        right: 50%;
+        /* right: 47%; */
+        left: 0;
+        background-color: #333;
         top: auto;
         bottom: -20px;
         transform: none;
-        width: 40px;
+        width: 100vw;
         height: 20px;
     }
 
