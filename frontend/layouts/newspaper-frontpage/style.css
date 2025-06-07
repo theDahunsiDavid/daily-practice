@@ -14,3 +14,22 @@ body {
   justify-content: center;
   text-align: center;
 }
+
+.navlink-container {
+  display: flex;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+  justify-content: space-around;
+  list-style-type: none;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.navlink {
+  text-decoration: none;
+}
+
+.navlink:hover {
+  text-decoration: none;
+}
