@@ -7,5 +7,10 @@ body {
 }
 
 .brand {
-  font-family: "Snell Roundhand";
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0px;
+  justify-content: center;
+  text-align: center;
 }
