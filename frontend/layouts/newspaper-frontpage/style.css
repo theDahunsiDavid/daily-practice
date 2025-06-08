@@ -7,11 +7,11 @@ body {
 }
 
 .brand {
-  font-family: "Pinyon Script", cursive;
-  font-weight: 400;
-  font-style: normal;
-  margin: 10px 0px;
-  justify-content: center;
+  font-family: "Snell Roundhand";
+  font-weight: normal;
+  font-size: 60px;
+  margin: 40px 0px;
+  /* justify-content: center; */
   text-align: center;
 }
 
@@ -23,13 +23,15 @@ body {
   justify-content: space-around;
   list-style-type: none;
   flex-direction: row;
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 .navlink {
   text-decoration: none;
   font-weight: bold;
-  color: gray;
+  color: #666;
+  font-size: 30px;
+  font-family: "Futura";
 }
 
 .navlink:hover {
