@@ -11,7 +11,6 @@ body {
   font-weight: normal;
   font-size: 60px;
   margin: 40px 0px;
-  /* justify-content: center; */
   text-align: center;
 }
 
@@ -21,7 +20,7 @@ body {
   padding: 20px;
   text-align: center;
   justify-content: space-around;
-  list-style-type: none;
+  list-style-type: none; /* Removes bullet points */
   flex-direction: row;
   border: 3px solid black;
 }
@@ -76,5 +75,25 @@ body {
 }
 
 .story-img {
-  margin: 0px;
+  display: block; /* Enables height, margin ... on image */
+  margin: 0 auto;
+  max-height: 250px;
+}
+
+.story {
+  padding: 10px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.story-3,
+.story-5 {
+  border-right: 3px solid black;
+}
+
+.story-header {
+  font-size: 30px;
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
 }
