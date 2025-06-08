@@ -6,7 +6,7 @@ body {
   padding: 30px;
 }
 
-.brand {
+.brand-header {
   font-family: "Snell Roundhand";
   font-weight: normal;
   font-size: 60px;
@@ -36,4 +36,32 @@ body {
 
 .navlink:hover {
   text-decoration: underline;
+}
+
+. brand-header {
+  grid-area: header;
+}
+
+.navlink-container {
+  grid-area: nav;
+}
+
+.story-1 {
+  grid-area: story1;
+}
+
+.story-2 {
+  grid-area: story2;
+}
+
+.story-3 {
+  grid-area: story3;
+}
+
+.story-4 {
+  grid-area: story4;
+}
+
+.story-5 {
+  grid-area: story5;
 }
