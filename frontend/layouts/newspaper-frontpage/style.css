@@ -28,6 +28,8 @@ body {
 
 .navlink {
   text-decoration: none;
+  font-weight: bold;
+  color: gray;
 }
 
 .navlink:hover {
