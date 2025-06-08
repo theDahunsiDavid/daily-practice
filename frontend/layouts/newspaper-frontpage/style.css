@@ -31,5 +31,5 @@ body {
 }
 
 .navlink:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
