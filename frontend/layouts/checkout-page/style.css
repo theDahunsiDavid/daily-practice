@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #efeeee;
+}
+
+.brand-header {
+  background-color: #43281c;
+  color: #fbf3c1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.brand-logo {
+  height: 25px;
+}
