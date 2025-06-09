@@ -23,3 +23,23 @@ body {
 .brand-logo {
   height: 25px;
 }
+
+.page {
+  padding: 30px;
+}
+
+.box {
+  background-color: #efe1d4;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.box-title {
+  margin-top: 10px;
+}
+
+.item-list,
+.item-specs {
+  list-style: none;
+}
