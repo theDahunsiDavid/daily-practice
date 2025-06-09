@@ -24,7 +24,7 @@ body {
   height: 25px;
 }
 
-.page {
+.order-section {
   padding: 30px;
 }
 
@@ -42,4 +42,18 @@ body {
 .item-list,
 .item-specs {
   list-style: none;
+}
+
+.order-details {
+  grid-area: quantity;
+}
+
+.customer-details {
+  grid-area: customer;
+}
+
+.order-section {
+  display: grid;
+  grid-template-areas: "quantity customer";
+  column-gap: 20px;
 }
