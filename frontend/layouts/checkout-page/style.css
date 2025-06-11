@@ -144,3 +144,14 @@ body {
 .total-entry {
   font-weight: bold;
 }
+
+.order-button {
+  background-color: #dfb992;
+  display: block;
+  width: 96%;
+  margin: 30px auto;
+  border: none;
+  padding: 10px;
+  border-radius: 100px;
+  font-size: 16px;
+}
