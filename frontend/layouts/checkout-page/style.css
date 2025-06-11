@@ -60,6 +60,7 @@ body {
 .order-section {
   display: grid;
   grid-template-areas: "quantity customer";
+  grid-template-columns: 1fr 1fr;
   column-gap: 35px;
 }
 
@@ -98,4 +99,31 @@ body {
 
 .items:last-child {
   border-bottom: none;
+}
+
+.input-group {
+  padding: 15px 0px;
+  position: relative;
+}
+
+.order-input {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  border: 2px solid #885a2d;
+  width: 100%;
+}
+
+#ccvNumber {
+  width: 200px;
+}
+
+.order-label {
+  position: absolute;
+  top: 10%;
+  font-size: 11px;
+  color: #b18969;
+  background-color: #eee1d5;
+  left: 25px;
+  padding: 0 5px;
 }
