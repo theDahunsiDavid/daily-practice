@@ -127,3 +127,20 @@ body {
   left: 25px;
   padding: 0 5px;
 }
+
+.order-table {
+  margin: 0px auto;
+}
+
+.column-1 {
+  padding-right: 350px;
+  padding-bottom: 15px;
+}
+
+.column-2 {
+  text-align: right;
+}
+
+.total-entry {
+  font-weight: bold;
+}
