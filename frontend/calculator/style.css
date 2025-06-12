@@ -12,3 +12,61 @@ body {
 .header {
   text-align: center;
 }
+
+.button-container {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.screen {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+  height: 80px;
+  font-size: 45px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 15px 5px 0px 0px;
+  border: none;
+}
+
+.calc-row {
+  display: flex;
+}
+
+.calc-btn {
+  flex: 1;
+  padding: 20px;
+  font-size: 30px;
+  background-color: #d8d9db;
+}
+
+.double {
+  flex: 2.8;
+}
+
+.triple {
+  flex: 4.6;
+}
+
+.calc-btn:last-child {
+  background-color: #df974c;
+  color: white;
+}
+
+.calc-btn:hover {
+  background-color: #ebebeb;
+}
+
+.calc-btn:hover:active {
+  background-color: #bbbcbe;
+}
+
+.calc-btn:last-child:hover {
+  background-color: #dfb07e;
+}
+
+.calc-btn:last-child:active {
+  background-color: #dd8d37;
+}
