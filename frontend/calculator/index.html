@@ -4,30 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A simple calculator built with HTML, CSS, and JavaScript." />
+    <link rel="stylesheet" href="style.css" />
     <title>Simple Calculator</title>
   </head>
 
   <body>
-    <h1>Simple Calculator</h1>
-    <div class="button-container">
-      <input class="screen" placeholder="0" />
-      <button class="button reset">C</button>
-      <button class="button backspace">←</button>
-      <button class="symbol divide">÷</button>
-      <button class="button seven">7</button>
-      <button class="button eight">8</button>
-      <button class="button nine">9</button>
-      <button class="symbol times">×</button>
-      <button class="button four">4</button>
-      <button class="button five">5</button>
-      <button class="button six">6</button>
-      <button class="symbol minus">-</button>
-      <button class="button one">1</button>
-      <button class="button two">2</button>
-      <button class="button three">3</button>
-      <button class="symbol plus">+</button>
-      <button class="button zero">0</button>
-      <button class="symbol equals">=</button>
+    <div class="calculator">
+      <h1 class="header">Simple Calculator</h1>
+      <div class="button-container">
+        <input class="screen" placeholder="0" />
+        <div class="calc-row">
+          <button class="calc-btn">C</button>
+          <button class="calc-btn">←</button>
+          <button class="calc-btn">÷</button>
+        </div>
+        <div class="calc-row">
+          <button class="calc-btn">7</button>
+          <button class="calc-btn">8</button>
+          <button class="calc-btn">9</button>
+          <button class="calc-btn">×</button>
+        </div>
+        <div class="calc-row">
+          <button class="calc-btn">4</button>
+          <button class="calc-btn">5</button>
+          <button class="calc-btn">6</button>
+          <button class="calc-btn">-</button>
+        </div>
+        <div class="calc-row">
+          <button class="calc-btn">1</button>
+          <button class="calc-btn">2</button>
+          <button class="calc-btn">3</button>
+          <button class="calc-btn">+</button>
+        </div>
+        <div class="calc-row">
+          <button class="calc-btn">0</button>
+          <button class="calc-btn">=</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
