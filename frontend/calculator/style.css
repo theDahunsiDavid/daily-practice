@@ -20,7 +20,7 @@ body {
 }
 
 .screen {
-  width: 100%;
+  width: 400px;
   background-color: black;
   color: white;
   text-align: right;
@@ -29,6 +29,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   padding: 15px 5px 0px 0px;
   border: none;
+  margin: 0 auto;
 }
 
 .calc-row {
