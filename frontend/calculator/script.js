@@ -6,6 +6,9 @@ const btnContainer = document.querySelector(".button-container");
 const screen = document.querySelector(".screen");
 
 function mathHandler(symbol) {
+  lastOperation = parseInt(lastOperation);
+  buffer = parseInt(buffer);
+
   console.log("last operator:", lastOperator);
   if (lastOperator !== null) {
     console.log("Other operation: ", buffer);
