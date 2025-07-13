@@ -92,8 +92,14 @@ function submit() {
   }, 1);
 }
 
+function setLoading(isLoading) {
+  spinner.classList.toggle("spiralshow", isLoading);
+}
+
 async function init() {
+  setLoading(true);
   dayWord = await getDayWord();
+  setLoading(false);
   document.addEventListener("keydown", inputHandler);
 }
 
