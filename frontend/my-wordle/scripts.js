@@ -37,7 +37,6 @@ function addLetter(letter) {
   } else {
     buffer = buffer.substring(0, ANSWER_LENGTH - 1) + letter;
   }
-
   boxes[ANSWER_LENGTH * currentRow + buffer.length - 1].textContent = letter.toUpperCase();
 }
 
@@ -54,8 +53,7 @@ function colorCoder() {
   for (let i = 0; i < ANSWER_LENGTH; i++) {
     letterMatch = 0;
     if (buffer[i] === dayWord[i]) {
-      boxes[ANSWER_LENGTH * currentRow + i].style.backgroundColor = "green";
-      boxes[ANSWER_LENGTH * currentRow + i].style.color = "white";
+      boxes[ANSWER_LENGTH * currentRow + i].classList.add("correct");
       let letterIndex = dayWordCopy.indexOf(buffer[i]);
       dayWordCopy.splice(letterIndex, 1);
       letterMatch++;
@@ -64,22 +62,19 @@ function colorCoder() {
 
   for (let i = 0; i < ANSWER_LENGTH; i++) {
     if (dayWordCopy.includes(buffer[i]) && buffer[i] !== dayWord[i]) {
-      boxes[ANSWER_LENGTH * currentRow + i].style.backgroundColor = "orange";
-      boxes[ANSWER_LENGTH * currentRow + i].style.color = "white";
+      boxes[ANSWER_LENGTH * currentRow + i].classList.add("close");
       let letterIndex = dayWordCopy.indexOf(buffer[i]);
       dayWordCopy.splice(letterIndex, 1);
       letterMatch--;
     } else if (buffer[i] !== dayWord[i] && !dayWordCopy.includes(buffer[i])) {
-      boxes[ANSWER_LENGTH * currentRow + i].style.backgroundColor = "gray";
-      boxes[ANSWER_LENGTH * currentRow + i].style.color = "white";
+      boxes[ANSWER_LENGTH * currentRow + i].classList.add("wrong");
       letterMatch--;
     }
   }
 }
 
-async function submit() {
+function submit() {
   if (buffer.length === ANSWER_LENGTH) {
-    const dayWord = await getDayWord();
     colorCoder();
     buffer = "";
   }
@@ -97,7 +92,8 @@ async function submit() {
   }, 1);
 }
 
-function init() {
+async function init() {
+  dayWord = await getDayWord();
   document.addEventListener("keydown", inputHandler);
 }
 

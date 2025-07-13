@@ -45,3 +45,18 @@ body {
   justify-content: center;
   gap: 10px;
 }
+
+.correct {
+  background-color: darkgreen;
+  color: white;
+}
+
+.close {
+  background-color: goldenrod;
+  color: white;
+}
+
+.wrong {
+  background-color: #888;
+  color: white;
+}
