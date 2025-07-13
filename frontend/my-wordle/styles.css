@@ -10,6 +10,8 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .brand {
@@ -19,14 +21,6 @@ body {
   margin: 0;
 }
 
-.spiral {
-  visibility: hidden;
-  margin: 10px 0px 10px 0px;
-  font-size: 40px;
-  text-align: center;
-  animation: spin 1.5s linear infinite;
-}
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -34,6 +28,14 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.spiral {
+  visibility: hidden;
+  margin: 10px 0px 10px 0px;
+  font-size: 40px;
+  text-align: center;
+  animation: spin 1.5s linear infinite;
 }
 
 .spiralshow {
@@ -70,7 +72,52 @@ body {
   color: white;
 }
 
+@keyframes flash {
+  5% {
+    border-color: crimson;
+  }
+
+  100% {
+    border-color: #ccc;
+  }
+}
+
 .wrong {
   background-color: #888;
   color: white;
+}
+
+.invalid {
+  animation: flash 1s;
+}
+
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.winner {
+  animation: rainbow 4s infinite linear;
 }

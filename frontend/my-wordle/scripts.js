@@ -4,6 +4,7 @@ const header = document.querySelector(".brand");
 const ANSWER_LENGTH = 5;
 let currentRow = 0;
 const dayWordUrl = "https://words.dev-apis.com/word-of-the-day";
+const checkWordUrl = "https://words.dev-apis.com/validate-word";
 let dayWord = "";
 let buffer = "";
 let letterMatch = 0;
@@ -14,7 +15,7 @@ function isLetter(letter) {
 
 function inputHandler(event) {
   if (event.key === "Enter" && buffer.length === ANSWER_LENGTH) {
-    submit();
+    checkIfWord();
   } else if (event.key === "Backspace") {
     splicer();
   } else if (boxes[29].innerText === "" && isLetter(event.key)) {
@@ -73,6 +74,33 @@ function colorCoder() {
   }
 }
 
+async function checkIfWord() {
+  setLoading(true);
+  const res = await fetch(checkWordUrl, {
+    method: "POST",
+    body: JSON.stringify({ word: buffer }),
+  });
+  const resObj = await res.json();
+  const isValid = resObj.validWord;
+  setLoading(false);
+  console.log("isValid: ", isValid);
+  if (!isValid) {
+    runRedAlert();
+  } else {
+    submit();
+  }
+}
+
+function runRedAlert() {
+  for (let i = 0; i < buffer.length; i++) {
+    boxes[ANSWER_LENGTH * currentRow + i].classList.remove("invalid");
+
+    setTimeout(() => {
+      boxes[ANSWER_LENGTH * currentRow + i].classList.add("invalid");
+    }, 10);
+  }
+}
+
 function submit() {
   if (buffer.length === ANSWER_LENGTH) {
     colorCoder();
@@ -86,10 +114,11 @@ function submit() {
     } else {
       if (letterMatch === 1 && currentRow <= 5) {
         alert("you win");
+        document.querySelector(".brand").classList.add("winner");
         document.removeEventListener("keydown", inputHandler);
       }
     }
-  }, 1);
+  }, 1000);
 }
 
 function setLoading(isLoading) {
