@@ -1,5 +1,5 @@
 const boxes = document.querySelectorAll(".box");
-const spinner = document.querySelector(".spiral");
+const spinner = document.querySelector(".loader");
 const header = document.querySelector(".brand");
 const ANSWER_LENGTH = 5;
 let currentRow = 0;
@@ -122,7 +122,7 @@ function submit() {
 }
 
 function setLoading(isLoading) {
-  spinner.classList.toggle("spiralshow", isLoading);
+  spinner.classList.toggle("loadershow", isLoading);
 }
 
 async function init() {
