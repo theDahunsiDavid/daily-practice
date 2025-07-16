@@ -32,7 +32,7 @@ body {
 
 .spiral {
   visibility: hidden;
-  margin: 10px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
   font-size: 40px;
   text-align: center;
   animation: spin 1.5s linear infinite;
@@ -55,11 +55,11 @@ body {
 
 .box-container {
   display: grid;
-  max-width: 295px;
+  max-width: fit-content;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
-  gap: 10px;
+  gap: 3px;
 }
 
 .correct {
@@ -123,7 +123,7 @@ body {
 }
 
 .keyboard {
-  margin-top: 40px;
+  margin-top: 30px;
   width: 100%;
 }
 
@@ -132,15 +132,39 @@ body {
   flex-direction: row;
   justify-content: center;
   margin: 10px 0;
-  column-gap: 10px;
+  gap: 5px;
 }
 
 .key {
-  border: 2px solid #ccc;
+  border: none;
+  border-radius: 3px;
   width: 25px;
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 17px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  color: white;
+  background-color: #888;
+}
+
+.key:hover {
+  background-color: #666;
+}
+
+,
+key:hover:active {
+  background-color: black;
+}
+
+.enter {
+  width: 70px;
+  font-size: 13px;
+}
+
+.backspace {
+  width: 60px;
 }
