@@ -1,4 +1,5 @@
 const boxes = document.querySelectorAll(".box");
+const onscreenKeyboard = document.querySelectorAll(".key");
 const spinner = document.querySelector(".loader");
 const header = document.querySelector(".brand");
 const ANSWER_LENGTH = 5;
@@ -14,12 +15,13 @@ function isLetter(letter) {
 }
 
 function inputHandler(event) {
-  if (event.key === "Enter" && buffer.length === ANSWER_LENGTH) {
+  const key = event.type === "keydown" ? event.key : event.target.innerText;
+  if ((key === "Enter" || key === "ENTER") && buffer.length === ANSWER_LENGTH) {
     checkIfWord();
-  } else if (event.key === "Backspace") {
+  } else if (key === "Backspace" || key === "⌫") {
     splicer();
-  } else if (boxes[29].innerText === "" && isLetter(event.key)) {
-    addLetter(event.key);
+  } else if (boxes[29].innerText === "" && isLetter(key)) {
+    addLetter(key);
   } else {
     // do nothing for other keys
   }
@@ -55,6 +57,12 @@ function colorCoder() {
     letterMatch = 0;
     if (buffer[i] === dayWord[i]) {
       boxes[ANSWER_LENGTH * currentRow + i].classList.add("correct");
+      for (let keypad of onscreenKeyboard) {
+        if (keypad.innerText === buffer[i]) {
+          console.log("keypad: ", keypad);
+          keypad.classList.add("correct");
+        }
+      }
       let letterIndex = dayWordCopy.indexOf(buffer[i]);
       dayWordCopy.splice(letterIndex, 1);
       letterMatch++;
@@ -83,7 +91,6 @@ async function checkIfWord() {
   const resObj = await res.json();
   const isValid = resObj.validWord;
   setLoading(false);
-  console.log("isValid: ", isValid);
   if (!isValid) {
     runRedAlert();
   } else {
@@ -130,6 +137,9 @@ async function init() {
   dayWord = await getDayWord();
   setLoading(false);
   document.addEventListener("keydown", inputHandler);
+  onscreenKeyboard.forEach((key) => {
+    key.addEventListener("click", inputHandler);
+  });
 }
 
 init();
