@@ -121,3 +121,24 @@ body {
 .winner {
   animation: rainbow 4s infinite linear;
 }
+
+.keyboard {
+  margin-top: 40px;
+}
+
+.key-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0;
+  column-gap: 10px;
+}
+
+.key {
+  border: 2px solid #ccc;
+  width: 25px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
