@@ -138,7 +138,7 @@ body {
 .key {
   border: 2px solid #ccc;
   width: 25px;
-  height: 35px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
