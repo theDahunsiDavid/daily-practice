@@ -202,3 +202,18 @@ body {
 .invalid {
   animation: flash 1s;
 }
+
+@media (max-width: 760px) {
+  .keyboard {
+    margin-top: 80px;
+  }
+
+  .key {
+    padding: 20px;
+  }
+
+  .box {
+    width: 53px;
+    height: 53px;
+  }
+}
