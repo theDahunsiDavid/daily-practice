@@ -213,8 +213,8 @@ body {
   }
 
   .spacer {
-    height: 9vh;
-    height: 9dvh;
+    height: 3vh;
+    height: 3dvh;
     flex-shrink: 1;
   }
 
@@ -229,7 +229,7 @@ body {
   }
 
   .box {
-    width: 53px;
-    height: 53px;
+    width: 60px;
+    height: 60px;
   }
 }
