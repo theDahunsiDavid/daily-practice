@@ -80,6 +80,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.1s ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.typing {
+  animation: pop 0.1s ease-in-out;
 }
 
 .box-container {
@@ -116,6 +134,22 @@ body {
   100% {
     color: red;
   }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.flip {
+  animation: flip 0.6s ease-in-out;
 }
 
 .winner {

@@ -43,7 +43,13 @@ function addLetter(letter) {
   } else {
     buffer = buffer.substring(0, ANSWER_LENGTH - 1) + letter;
   }
+
   boxes[ANSWER_LENGTH * currentRow + buffer.length - 1].textContent = letter.toUpperCase();
+  boxes[ANSWER_LENGTH * currentRow + buffer.length - 1].classList.add("typing");
+
+  setTimeout(() => {
+    boxes[ANSWER_LENGTH * currentRow + buffer.length - 1].classList.remove("typing");
+  }, 100);
 }
 
 async function getDayWord() {
@@ -62,7 +68,6 @@ function colorCoder() {
       boxes[ANSWER_LENGTH * currentRow + i].classList.add("correct");
       for (let keypad of onscreenKeyboard) {
         if (keypad.innerText === buffer[i]) {
-          console.log("keypad: ", keypad);
           keypad.classList.add("correct");
         }
       }
@@ -84,6 +89,40 @@ function colorCoder() {
     }
   }
 }
+
+// function colorCoder() {
+//   let dayWordCopy = dayWord.split("");
+//   buffer = buffer.toUpperCase();
+//
+//   const rowToColor = currentRow;
+//
+//   for (let i = 0; i < ANSWER_LENGTH; i++) {
+//     setTimeout(() => {
+//       console.log("Current Row:", currentRow, "Index:", i);
+//       boxes[ANSWER_LENGTH * rowToColor + i].classList.add("flip");
+//
+//       setTimeout(() => {
+//         applyColorCoding(i, dayWordCopy, rowToColor);
+//       }, 300);
+//     }, i * 100);
+//   }
+// }
+//
+// function applyColorCoding(i, dayWordCopy, rowToColor) {
+//   if (buffer[i] === dayWord[i]) {
+//     boxes[ANSWER_LENGTH * rowToColor + i].classList.add("correct");
+//     // Update keyboard
+//     for (let keypad of onscreenKeyboard) {
+//       if (keypad.innerText === buffer[i]) {
+//         keypad.classList.add("correct");
+//       }
+//     }
+//   } else if (dayWordCopy.includes(buffer[i]) && buffer[i] !== dayWord[i]) {
+//     boxes[ANSWER_LENGTH * rowToColor + i].classList.add("close");
+//   } else if (buffer[i] !== dayWord[i] && !dayWordCopy.includes(buffer[i])) {
+//     boxes[ANSWER_LENGTH * rowToColor + i].classList.add("wrong");
+//   }
+// }
 
 async function checkIfWord() {
   setLoading(true);
