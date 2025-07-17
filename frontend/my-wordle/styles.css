@@ -207,7 +207,7 @@ body {
   .main {
     display: flex;
     flex-direction: column;
-    min-height: 100dvh;
+    min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
     justify-content: space-between;
   }
 
