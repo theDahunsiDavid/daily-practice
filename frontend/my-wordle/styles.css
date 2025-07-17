@@ -208,15 +208,18 @@ body {
   .main {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* min-height: 100vh; */
+    min-height: 100vh;
+  }
+
+  .spacer {
+    height: 9vh;
+    flex-shrink: 1;
   }
 
   .box-container {
   }
 
   .keyboard {
-    margin-top: auto;
   }
 
   .key {
