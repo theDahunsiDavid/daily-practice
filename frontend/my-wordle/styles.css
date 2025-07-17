@@ -211,6 +211,12 @@ body {
     justify-content: space-between;
   }
 
+  .box-container {
+  }
+
+  .keyboard {
+  }
+
   .key {
     padding: 20px;
   }
