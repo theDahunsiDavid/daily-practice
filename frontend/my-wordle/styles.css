@@ -209,10 +209,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-height: 100dvh;
   }
 
   .spacer {
     height: 9vh;
+    height: 9dvh;
     flex-shrink: 1;
   }
 
