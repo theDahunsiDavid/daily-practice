@@ -20,7 +20,10 @@ function inputHandler(event) {
     checkIfWord();
   } else if (key === "Backspace" || key === "⌫") {
     splicer();
-  } else if (boxes[29].innerText === "" && isLetter(key)) {
+  } else if (
+    (boxes[29].innerText === "" || (boxes[29].innerText !== "" && boxes[28].innerText !== "")) &&
+    isLetter(key)
+  ) {
     addLetter(key);
   } else {
     // do nothing for other keys
