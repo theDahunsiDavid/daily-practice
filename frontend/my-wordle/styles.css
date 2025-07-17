@@ -205,7 +205,8 @@ body {
 
 @media (max-width: 760px) {
   .keyboard {
-    margin-top: 80px;
+    position: sticky;
+    bottom: 0;
   }
 
   .key {
