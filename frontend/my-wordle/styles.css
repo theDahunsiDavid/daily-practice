@@ -204,9 +204,14 @@ body {
 }
 
 @media (max-width: 760px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   .keyboard {
-    position: sticky;
-    bottom: 0;
+    margin-top: auto;
   }
 
   .key {
