@@ -135,10 +135,20 @@ function applyColorCoding(i, dayWordCopy, capturedRowToColor, capturedBuffer) {
 
   if (dayWordCopy.includes(capturedBuffer[i]) && capturedBuffer[i] !== dayWord[i]) {
     boxes[ANSWER_LENGTH * capturedRowToColor + i].classList.add("close");
+    for (let keypad of onscreenKeyboard) {
+      if (keypad.innerText === capturedBuffer[i]) {
+        keypad.classList.add("close");
+      }
+    }
     let letterIndex = dayWordCopy.indexOf(capturedBuffer[i]);
     dayWordCopy.splice(letterIndex, 1);
   } else if (capturedBuffer[i] !== dayWord[i] && !dayWordCopy.includes(capturedBuffer[i])) {
     boxes[ANSWER_LENGTH * capturedRowToColor + i].classList.add("wrong");
+    for (let keypad of onscreenKeyboard) {
+      if (keypad.innerText === capturedBuffer[i]) {
+        keypad.classList.add("wrong");
+      }
+    }
   }
 }
 
