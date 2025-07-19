@@ -181,8 +181,8 @@ body {
   font-size: 20px;
   font-weight: 800;
   cursor: pointer;
-  color: white;
-  background-color: #777;
+  color: black;
+  background-color: #aaa;
 }
 
 .key:hover {
