@@ -187,11 +187,17 @@ function submit() {
         // console.log("Letter match is: ", letterMatch);
         alert("You lose, the word was: " + dayWord);
         document.removeEventListener("keydown", inputHandler);
+        onscreenKeyboard.forEach((key) => {
+          key.removeEventListener("click", inputHandler);
+        });
       } else if (letterMatch === ANSWER_LENGTH) {
         // console.log("Letter match is: ", letterMatch);
         alert("You win!");
         document.querySelector(".brand").classList.add("winner");
         document.removeEventListener("keydown", inputHandler);
+        onscreenKeyboard.forEach((key) => {
+          key.removeEventListener("click", inputHandler);
+        });
       }
     });
     buffer = "";
