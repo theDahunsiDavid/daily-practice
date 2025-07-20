@@ -13,7 +13,8 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #e2e2e1;
+  /* background-color: #e2e2e1; */
+  background-color: white;
 }
 
 .brand {
@@ -182,16 +183,17 @@ body {
   font-weight: 800;
   cursor: pointer;
   color: black;
-  background-color: #aaa;
+  background-color: #d2d7da;
+  /* background-color: #aaa; */
 }
 
-.key:hover {
-  background-color: #888;
-}
-
-.key:active {
-  background-color: black !important;
-}
+/* .key:hover { */
+/*   background-color: #888; */
+/* } */
+/**/
+/* .key:active { */
+/*   background-color: black !important; */
+/* } */
 
 .enter {
   width: 70px;
